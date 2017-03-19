@@ -1,9 +1,10 @@
 # Terraform Bitcoin nodes on Digitalocean
 Easy terraform setup for Bitcoin nodes on DigitalOcean.
 
-There are different branches each one related to different clients or providers.
+There are different branches each one related to different clients and providers.
 
  * `do/bitcoin-unlimited`: Bitcoin Unlimited on DigitalOcean
+ * `do/bitcoin-classic`: Bitcoin Classic on DigitalOcean
  * `do/bitcoin-core`: Bitcoin Core on DigitalOcean
 
 Feel free to change the code and create Pull requests to support multiple providers,
