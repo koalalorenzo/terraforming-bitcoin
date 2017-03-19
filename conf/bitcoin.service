@@ -1,0 +1,18 @@
+[Unit]
+Description=Bitcoin Server
+After=network.target
+After=syslog.target
+
+[Install]
+WantedBy=multi-user.target
+Alias=bitcoind.service
+
+[Service]
+User=bitcoin
+Group=bitcoin
+
+# Start main service
+ExecStart=/usr/bin/bitcoind
+ExecStop=/usr/bin/bitcoin-cli stop
+Restart=always
+PrivateTmp=false
