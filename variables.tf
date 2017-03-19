@@ -1,17 +1,5 @@
 ## Settings
 
-# variable "do_token" {
-#   description = "The DigitalOcean API Token"
-# }
-
-# variable "sk_username" {
-#   description = "The Status Cake username"
-# }
-
-# variable "sk_token" {
-#   description = "The Status Cake API Token"
-# }
-
 variable "droplet_size" {
   description = "The droplet size [512mb, 1g, 2gb, 4gb, ...]"
   default     = "512mb"
