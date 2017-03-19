@@ -1,5 +1,5 @@
 ################################################################################
-# Bitcoin Unlimited                                                                 #
+# Bitcoin Classic                                                                 #
 ################################################################################
 
 resource "digitalocean_droplet" "node" {
@@ -38,7 +38,7 @@ resource "digitalocean_droplet" "node" {
       "sudo ufw default deny incoming",
       "sudo ufw default allow outgoing",
       "sudo ufw allow 8333",
-      "sudo add-apt-repository -y ppa:bitcoin-unlimited/bu-ppa",
+      "sudo apt-add-repository ppa:bitcoinclassic/bitcoinclassic",
       "sudo apt-get update",
       "sudo apt-get install -qq -y bitcoind",
       "sudo adduser --disabled-password --gecos '' bitcoin",
