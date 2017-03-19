@@ -1,7 +1,10 @@
 # Terraform Bitcoin nodes on Digitalocean
 Easy terraform setup for Bitcoin nodes on DigitalOcean.
-It is using always the latest version of Bitcoin Unlimited from the [official
-Ubuntu PPA repositories](https://launchpad.net/~bitcoin-unlimited/+archive/ubuntu/bu-ppa).
+
+There are different branches each one related to different clients or providers.
+
+ * `do/bitcoin-unlimited`: Bitcoin Unlimited on DigitalOcean
+ * `do/bitcoin-core`: Bitcoin Core on DigitalOcean
 
 Feel free to change the code and create Pull requests to support multiple providers,
 client versions, and remember: peaceful diversity is the way to survive!
