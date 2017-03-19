@@ -1,3 +1,7 @@
+################################################################################
+# Bitcoin Core                                                                 #
+################################################################################
+
 resource "digitalocean_droplet" "node" {
   depends_on = ["digitalocean_ssh_key.default"]
   count      = "${var.total_count}"
@@ -34,7 +38,7 @@ resource "digitalocean_droplet" "node" {
       "sudo ufw default deny incoming",
       "sudo ufw default allow outgoing",
       "sudo ufw allow 8333",
-      "sudo add-apt-repository -y ppa:bitcoin-unlimited/bu-ppa",
+      "sudo add-apt-repository ppa:bitcoin/bitcoin",
       "sudo apt-get update",
       "sudo apt-get install -qq -y bitcoind",
       "sudo adduser --disabled-password --gecos '' bitcoin",
@@ -47,7 +51,8 @@ resource "digitalocean_droplet" "node" {
       ## No user can use sudo for security reason, so if disabled, the only
       ## way to upgrade is re-create the droplet by marking it as tainted.
       ## If disabled, just connect using 'mosh root@IP'
-      # "sudo sed -i 's/\\(PermitRootLogin \\).*/\\1no/' /etc/ssh/sshd_config",
+      "sudo sed -i 's/\\(PermitRootLogin \\).*/\\1no/' /etc/ssh/sshd_config",
+
       "sleep 5",
     ]
 
