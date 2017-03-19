@@ -1,3 +1,7 @@
+################################################################################
+# Bitcoin Unlimited                                                                 #
+################################################################################
+
 resource "digitalocean_droplet" "node" {
   depends_on = ["digitalocean_ssh_key.default"]
   count      = "${var.total_count}"
