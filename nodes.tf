@@ -93,6 +93,7 @@ resource "digitalocean_droplet" "node" {
     inline = [
       "mkdir ~/.bitcoin",
       "echo 'prune=5000' >> ~/.bitcoin/bitcoin.conf",
+      "echo 'maxmempool=20' >> ~/.bitcoin/bitcoin.conf",
     ]
 
     connection {
